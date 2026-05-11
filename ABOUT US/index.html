@@ -3,280 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
-    <script src="script.js" defer></script>
+    <title>YAPSDEVELOPER | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #ffbf00;
+            --bg-dark: #090b0e;
+        }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg-dark);
+            background-image: radial-gradient(circle at 50% 50%, #1a1d23 0%, #090b0e 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .accent-yellow { color: var(--accent); }
+        .bg-accent-yellow { background-color: var(--accent); }
+        
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Glassmorphism Sidebar Inputs */
+        .input-style {
+            background: rgba(15, 17, 21, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: border-color 0.3s ease;
+        }
+        .input-style:focus {
+            border-color: var(--accent);
+            outline: none;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <a href="#" class="logo">YAPS<span>DEV</span></a>
-       <nav class="navbar">        
-        <ul class="nav-list">
-           <li><a href="#">Home</a></li>
-           <li><a href="#About">About</a></li>
-            <li><a href="#Servics">Services</a></li>
-           <li><a href="#Projects">Projects</a></li>
-            <li><a href="#Contact">Contact</a></li>
-        <div class="follow-me">
-            <a href="#">Follow</a>
-        <a href="https://www.facebook.com/AIDSAPANA" target="_blank" aria-label="Facebook" >
-            <i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com/AIDSAPANA" target="_blank" aria-label="Twitter">
-            <i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/AIDSAPANA" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i></a>
-</div>
-</nav>
-</header>
-<!-- ================== HERO SECTION================--> 
- <section class="hero" id="home" >
-<!--LEFT CONTENT-->
-<div class="hero-text">
-    <span class="tag">NKATA BRIAN</span>
-<h1>
-    HAY! I'M <span>YAPS BRIAN</span><br>
-    I'M A <span class="blue">DEVELOPER</span>
-</h1>
- <p>"I'm a software developer focuse on designing and building custom software solutionfor clients"<br>
-     "I help companies solve problems by developing and improving their digital tools."
- </p>
-<div class="social-icons">
-    <button class="btn-touch">GET IN TOUCH</button>
-    <div class="social-icons">
-        <a href="#"><i class="fab
-        fa-facebook-f"></i></a>
-        <a href="#"><i class="fab
-        fa-whatsapp"></i></a>
-        <a href="#"><i class="fab
-        fa-twitter"></i></a>
-    </div>
-</div>
-</div>
-<!-- RIGHT IMAGE -->
- <div class="here-image">
-    <img src="IMAGE/IMG-20260120-WA0063.jpg"  class="profile" lalt="Profile">
- </div>
-</section>
+<body class="text-gray-300 p-6">
 
-<section class="about" id="about">
-  <div class="container">
-    <div class="profile-pic">
-      <img src="IMAGE/devoloper2.jpg" alt="">
-        </div>
-          <div class="content">   
-             <h2>ABOUT US</h2> 
-               <p>Hi, I'm YAPS BRIAN, a software developer with 5+ years of 
-                   experience in building websites and mobile applications.</p>
-                    <p>I specialize in javascript, React, and Node.js, 
-                       and I'm passionate about creating innovations, UI/UX designer
-                         helping business create with user insights to 
-                        craft interface that are both bueatful and functional.
+    <main class="max-w-6xl w-full bg-[#1a1d23]/80 backdrop-blur-md rounded-3xl overflow-hidden border border-white/5 shadow-2xl reveal">
+        
+        <header class="flex items-center justify-between px-8 py-5 border-b border-white/5">
+            <div class="flex space-x-2">
+                <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+            </div>
+            <nav class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-widest">
+                <a href="#" class="hover:text-amber-400 transition">Home</a>
+                <a href="#about" class="hover:text-amber-400 transition">About</a>
+                <a href="#projects" class="hover:text-amber-400 transition">Portfolio</a>
+                <a href="#contact" class="hover:text-amber-400 transition">Contact</a>
+            </nav>
+            <div class="w-4 h-4 text-gray-500">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </div>
+        </header>
+
+        <section id="home" class="grid md:grid-cols-2 gap-12 p-10 md:p-16 items-center">
+            <div class="reveal">
+                <h1 class="text-5xl font-extrabold text-white mb-3 tracking-tight">Hi, I'm <span class="uppercase">Yapsdeveloper</span></h1>
+                <p class="accent-yellow text-xl font-medium mb-6">Frontend Developer</p>
+                <p class="text-gray-400 leading-relaxed mb-8 text-sm max-w-sm">
+                    Crafting immersive digital experiences with clean code and modern aesthetics. Specializing in high-performance React applications.
+                </p>
+                <div class="flex items-center space-x-5">
+                    <button class="bg-accent-yellow text-black px-10 py-3.5 rounded-full font-black text-sm hover:scale-105 transition-transform shadow-xl shadow-yellow-500/10">Join More</button>
+                    <span class="text-3xl text-gray-700 font-serif">...</span>
+                </div>
+            </div>
+            <div class="reveal">
+                <div class="rounded-2xl overflow-hidden grayscale border border-white/10 hover:grayscale-0 transition-all duration-700 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" alt="Developer Portrait" class="w-full h-80 object-cover">
+                </div>
+            </div>
+        </section>
+
+        <div class="grid md:grid-cols-3 gap-0 border-t border-white/5">
+            
+            <section id="projects" class="md:col-span-2 p-10 md:p-14 border-r border-white/5 reveal">
+                <h2 class="text-2xl font-bold text-white mb-10">Featured Projects</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <article class="group cursor-pointer">
+                        <div class="bg-gray-800/50 aspect-[4/3] rounded-2xl mb-4 border border-white/5 group-hover:border-amber-500/50 transition-colors overflow-hidden">
+                             <div class="w-full h-full bg-gradient-to-tr from-blue-500/10 to-transparent"></div>
+                        </div>
+                        <h3 class="text-sm font-bold text-white">Project One</h3>
+                        <p class="text-[11px] text-gray-500 mt-2 leading-relaxed">Responsive dashboard UI with data visualization.</p>
+                        <p class="text-[10px] accent-yellow mt-3 italic font-semibold opacity-0 group-hover:opacity-100 transition-opacity">View Details →</p>
+                    </article>
+
+                    <article class="group cursor-pointer">
+                        <div class="bg-gray-800/50 aspect-[4/3] rounded-2xl mb-4 border border-white/5 group-hover:border-amber-500/50 transition-colors overflow-hidden">
+                            <div class="w-full h-full bg-gradient-to-tr from-purple-500/10 to-transparent"></div>
+                        </div>
+                        <h3 class="text-sm font-bold text-white">Project Two</h3>
+                        <p class="text-[11px] text-gray-500 mt-2 leading-relaxed">E-commerce platform with stripe integration.</p>
+                        <p class="text-[10px] accent-yellow mt-3 italic font-semibold opacity-0 group-hover:opacity-100 transition-opacity">View Details →</p>
+                    </article>
+
+                    <article class="group cursor-pointer">
+                        <div class="bg-gray-800/50 aspect-[4/3] rounded-2xl mb-4 border border-white/5 group-hover:border-amber-500/50 transition-colors overflow-hidden">
+                            <div class="w-full h-full bg-gradient-to-tr from-green-500/10 to-transparent"></div>
+                        </div>
+                        <h3 class="text-sm font-bold text-white">Project Three</h3>
+                        <p class="text-[11px] text-gray-500 mt-2 leading-relaxed">Social media landing page for tech startups.</p>
+                        <p class="text-[10px] accent-yellow mt-3 italic font-semibold opacity-0 group-hover:opacity-100 transition-opacity">View Details →</p>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="p-10 md:p-14 space-y-16 bg-black/10">
+                
+                <section id="about" class="reveal">
+                    <h2 class="text-lg font-bold text-white mb-4">About Me</h2>
+                    <p class="text-xs text-gray-400 leading-loose">
+                        I build modern and responsive web applications with a user-centric approach to frontend development. Passionate about UI/UX and clean code.
                     </p>
-                   <div class="stats">
-                <div class="stat">280+ <span>Projects</span></div>
-            <div class="stat">5+ <span>Experience</span></div>
-         <div class="stat">49+ <span>Clients</span></div>
-       </div>
-    <button class="touch-btn">GET  IN TOUCH</button>
- </div>
-</div>
-</section>
+                </section>
 
+                <section id="contact" class="reveal">
+                    <h2 class="text-lg font-bold text-white mb-6">Contact Me</h2>
+                    <form action="#" class="space-y-4">
+                        <input type="text" placeholder="Name" class="input-style w-full rounded-xl p-4 text-xs">
+                        <input type="email" placeholder="Email" class="input-style w-full rounded-xl p-4 text-xs">
+                        <textarea placeholder="Message" rows="4" class="input-style w-full rounded-xl p-4 text-xs resize-none"></textarea>
+                        <button type="submit" class="bg-accent-yellow text-black w-full py-4 rounded-xl font-bold text-xs hover:brightness-110 active:scale-95 transition-all">Send Message</button>
+                    </form>
+                </section>
 
-
-    <section class="services-section" id="services">
-        <div class="container">
-            <h2 class="section-title">My Services</h2>
-            <div class="services-grid">
-                
-                <!-- Service Card 1 -->
-                <div class="service-card">
-                    <i class="fas fa-code service-icon"></i>
-                    <h3>Web Development</h3>
-                    <p>Building responsive and high-performance websites using modern frameworks and technologies.</p>
-                </div>
-                
-                <!-- Service Card 2 -->
-                <div class="service-card">
-                    <i class="fas fa-mobile-alt service-icon"></i>
-                    <h3>Mobile App Development</h3>
-                    <p>Creating intuitive and feature-rich mobile applications for iOS and Android platforms.</p>
-                </div>
-                
-                <!-- Service Card 3 -->
-                <div class="service-card">
-                    <i class="fas fa-database service-icon"></i>
-                    <h3>Database Management</h3>
-                    <p>Designing and managing robust database solutions to ensure data integrity and efficiency.</p>
-                </div>
-
-                <!-- Service Card 4 -->
-                <div class="service-card">
-                    <i class="fas fa-cogs service-icon"></i>
-                    <h3>API Development</h3>
-                    <p>Building scalable and secure APIs to connect various services and applications seamlessly.</p>
-                </div>
-
-            </div>
+            </aside>
         </div>
-    </section>
-    <section id="work" class="work-section">
-  <h2 class="section-title">My Recent Work</h2>
-  <div class="projects-grid">
-    <!-- Project Card 1 -->
-    <div class="project-card">
-      <div class="project-img">
-        <img src="IMAGE/26.jpg" alt="Website Design">
-      </div>
-      <div class="project-info">
-        <h3>E-commerce Platform</h3>
-        <p>A full-stack application with real-time payment processing.</p>
-        <div class="tech-tags">
-          <span>React</span> <span>Node.js</span> <span>MongoDB</span>
-        </div>
-        <div class="project-links">
-          <a href="#" target="_blank">View Code</a>
-          <a href="#" class="btn-live" target="_blank">Live Demo</a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="project-card">
-      <div class="project-img">
-      <img src="IMAGE/20.jpg" alt="Website Design">
-      </div>
-      <div class="project-info">
-        <h3>E-commerce Platform</h3>
-        <p>A full-stack application with real-time payment processing.</p>
-        <div class="tech-tags">
-          <span>React</span> <span>Node.js</span> <span>MongoDB</span>
-        </div>
-        <div class="project-links">
-          <a href="#" target="_blank">View Code</a>
-          <a href="#" class="btn-live" target="_blank">Live Demo</a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="project-card">
-      <div class="project-img">
-      <img src="IMAGE/6.jpg" alt="Website Design">
-    </div>
-      <div class="project-info">
-        <h3>E-commerce Platform</h3>
-        <p>A full-stack application with real-time payment processing.</p>
-        <div class="tech-tags">
-          <span>React</span> <span>Node.js</span> <span>MongoDB</span>
-        </div>
-        <div class="project-links">
-          <a href="#" target="_blank">View Code</a>
-          <a href="#" class="btn-live" target="_blank">Live Demo</a>
-        </div>
-      </div>
-    </div>
+    </main>
 
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
 
-    <!-- Add more cards here -->
-  </div>
-</section>
-
-
-<div class="scroll-container">
-    <section class="portfolio-slide">
-<div class="content-x">
-    <img src="IMAGE/IMG_4344.JPG" class="display-photo" alt="profile-picture">
-    <p class="description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Doloremque aut totam asperiores, distinctio possimus non
-         excepturi mollitia est magni pariatur corporis eos, 
-        corrupti unde alias vero aperiam adipisci voluptatibus consequatur.
-    </p>
-    <h2>WANNYANA DENIZ ANDERSON</h2>
-    <P class="Company">AIDS APANA</P>
-    <div class="dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-
-    </div>
-</div>
-</section>
-<section class="portfolio-slide">
-<div class="content-x">
-    <img src="IMAGE/IMG_4344.JPG" class="display-photo" alt="profile-picture 2">
-    <p class="description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Doloremque aut totam asperiores, distinctio possimus non
-         excepturi mollitia est magni pariatur corporis eos, 
-        corrupti unde alias vero aperiam adipisci voluptatibus consequatur.
-    </p>
-    <h2>YAPS DJ</h2>
-    <P class="Company">YAPS<span>MUSIC</span></P>
-    <div class="dots">
-     <span class="dot"></span>
-     <span class="dot active"></span>
-     <span class="dot"></span>
-
-    </div>
-</div>
-</section>
-
-
-<section class="portfolio-slide">
-<div class="content-x">
-    <img src="IMAGE/IMG_4344.JPG" class="display-photo" alt="profile picture 3">
-    <p class="description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Doloremque aut totam asperiores, distinctio possimus non
-         excepturi mollitia est magni pariatur corporis eos, 
-        corrupti unde alias vero aperiam adipisci voluptatibus consequatur.
-    </p>
-    <h2>WANNYANA DENIZ ANDERSON</h2>
-    <P class="Company">AIDS<span>APANA</span></P>
-    <div class="dots">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot active"></span>
-    </div>
-</div>
-</section>
-</div>
-  
-  <section class="contact-section" id="contact">
-<div class="contact-container">
-    <div class="contact-inf">
-<img src="IMAGE/IMG-20251221-WA0018.jpg" class="contact-img" alt="">
-<p>briansnkata99@gmail.com</p>
-<p>+256784729944</p>
-    <div class="social-links">
-        <a href="https://www.facebook.com/AIDSAPANA" target="_blank" aria-label="Facebook" >
-            <i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com/AIDSAPANA" target="_blank" aria-label="Twitter">
-            <i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/AIDSAPANA" target="_blank" aria-label="Instagram">
-            <i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/+256784729944?text=Hello%20there!" target="_blank" aria-label="WhatsApp" rel="noopener noreferrer">
-            <i class="fab fa-whatsapp"></i></a>
-    </div>
-    </div>
-    <div class="contact-form">
-    <h2>Let's Discuss Your Project</h2>
-    <P>Always available for freelancincing if the right project comes along.
-         Feel free to contact me</P>
-         <form action="">
-            <div class="form-row">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-            </div>
-            <input type="text" placeholder="Subject" required>
-            <textarea placeholder="Your Message" name="" id=""></textarea>
-            <button type="submit">SEND MESSAGE</button>
-         </form>
-    </div>
-    </div>
-</section>
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
 </body>
-</html>
+                    </html>
+                        
